@@ -6,7 +6,7 @@ export interface NavTree {
 }
 export interface NavTreeChild {
   name: string;
-  depth: 0 | 1 | 2 | 3  | 4;
+  depth: 0 | 1 | 2 | 3 | 4;
   children: NavTreeChildren;
 }
 export interface NavTreeSection extends NavTreeChild {
@@ -48,16 +48,30 @@ export default function BuildNavTree(mdFiles: MarkdownData[]): NavTree {
 };
 
 const processFile = (file: MarkdownData, tree: NavTree): NavTree => {
+  const splitFileName = file.fileName.split("/");
+  let sectionFromUrl = "";
+  let subSectionFromUrl = "";
+  let nameFromUrl = "";
+  if (splitFileName.length >= 1) {
+    nameFromUrl = splitFileName[splitFileName.length - 1];
+    nameFromUrl = nameFromUrl
+      .replace(/-/g, " ")
+      .replace(/_/g, " ");
+  }
+  if (splitFileName.length >= 2)
+    sectionFromUrl = splitFileName[0];
+  if (splitFileName.length >= 3)
+    subSectionFromUrl = splitFileName[1];
   let link: NavTreeLink = {
-    name: file.matter.title ?? "",
-    section: file.matter.section ?? "",
-    subsection: file.matter.subsection ?? "",
+    name: file.matter.title ?? nameFromUrl ?? "",
+    section: file.matter.section ?? sectionFromUrl ?? "",
+    subsection: file.matter.subsection ?? subSectionFromUrl ?? "",
     link: file.fileName,
     children: {},
     depth: 0,
   }
   if (link.section != "") {
-    tree = processSection(file, tree);
+    tree = processSection(link.section, tree);
   }
   if (link.section != "" && link.subsection == "") {
     link.depth = 2;
@@ -65,22 +79,21 @@ const processFile = (file: MarkdownData, tree: NavTree): NavTree => {
   }
   else if (link.section != "" && link.subsection != "") {
     link.depth = 4;
-    tree = processSubSection(file, tree);
+    tree = processSubSection(link.section, link.subsection, tree);
     let subsection = tree.children[link.section].children[link.subsection] as NavTreeSubSection;
     subsection.children[link.link] = link;
   }
   else {
     tree.children[link.link] = link;
   }
-
   return tree;
 }
 
-const processSection = (file: MarkdownData, tree: NavTree): NavTree => {
-  if (file?.matter?.section && tree.children[file.matter.section])
+const processSection = (sectionName: string, tree: NavTree): NavTree => {
+  if (sectionName && tree.children[sectionName])
     return tree;
   const section: NavTreeSection = {
-    name: file.matter.section ?? "",
+    name: sectionName ?? "",
     depth: 1,
     children: {}
   }
@@ -88,18 +101,18 @@ const processSection = (file: MarkdownData, tree: NavTree): NavTree => {
   return tree;
 }
 
-const processSubSection = (file: MarkdownData, tree: NavTree): NavTree => {
-  if (file?.matter?.section
-    && tree.children[file.matter.section]
-    && file?.matter?.subsection
-    && tree.children[file.matter.section].children[file.matter.subsection])
+const processSubSection = (sectionName: string, subSectionName: string, tree: NavTree): NavTree => {
+  if (sectionName
+    && tree.children[sectionName]
+    && subSectionName
+    && tree.children[sectionName].children[subSectionName])
     return tree;
   const subsection: NavTreeSubSection = {
-    name: file.matter.subsection ?? "",
+    name: subSectionName ?? "",
     depth: 3,
-    section: file.matter.section ?? "",
+    section: sectionName ?? "",
     children: {}
   }
-  tree.children[subsection.section ?? ""].children[subsection.name ?? ""] = subsection;
+  tree.children[sectionName].children[subSectionName] = subsection;
   return tree;
 }

@@ -11,12 +11,13 @@ import Link from "next/link";
 export interface SidebarProps extends MarkdownParams { }
 
 export default async function Sidebar({ mdFiles }: SidebarProps) {
+  const headingNavTitle = "Docs";
   const tree = BuildNavTree(mdFiles);
   const renderChild = (child: NavTreeChild): ReactNode => {
     if (instanceOfNavTreeSection(child)) {
       return (
         <div key={child.name}>
-          <div className={`sidebar-nav-${child.depth}`}>
+          <div className={`nav-${child.depth}`}>
             <span>{child.name}</span>
           </div>
         </div>
@@ -24,7 +25,7 @@ export default async function Sidebar({ mdFiles }: SidebarProps) {
     } else if (instanceOfNavTreeSubSection(child)) {
       return (
         <div key={child.name}>
-          <div className={`sidebar-nav-${child.depth}`}>
+          <div className={`nav-${child.depth}`}>
             <span>{child.name}</span>
           </div>
         </div>
@@ -32,8 +33,8 @@ export default async function Sidebar({ mdFiles }: SidebarProps) {
     } else if (instanceOfNavTreeLink(child)) {
       return (
         <div key={child.name}>
-          <div className={`sidebar-nav-${child.depth}`}>
-            <Link href={`docs/${child.link}`}>{child.name}</Link>
+          <div className={`nav-${child.depth}`}>
+            <Link href={`/docs/${child.link}`}>{child.name}</Link>
           </div>
         </div>
       )
@@ -47,6 +48,7 @@ export default async function Sidebar({ mdFiles }: SidebarProps) {
     for (const k in tree) {
       let item = tree[k];
       nodes.push(renderChild(item));
+      nodes.push(renderChildren(item.children));
     }
     return nodes;
   };
@@ -54,7 +56,12 @@ export default async function Sidebar({ mdFiles }: SidebarProps) {
   return (
     <nav className="w-full sidebar">
       <section className="pr-8 border-r-2 border-color">
-        {renderChildren(tree.children)}
+        <div className="mb-4">
+          <b>{headingNavTitle}</b>
+        </div>
+        <div>
+          {renderChildren(tree.children)}
+        </div>
       </section>
     </nav>
   )

@@ -25,6 +25,11 @@ header {
 pre {
   margin: 1rem 0.5rem;
   padding: 1rem;
+  white-space: pre-line;
+}
+
+code, span {
+  word-wrap: break-word;
 }
 
 h1, h2 {
@@ -136,11 +141,7 @@ a:active {
   color: var(--link-active-color);
 }
 
-.nav-0 {
-  margin-bottom: 1rem;
-}
-
-.nav-1 {
+.nav-0, .nav-1 {
   margin-bottom: 0.5rem;
 }
 

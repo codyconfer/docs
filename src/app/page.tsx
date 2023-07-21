@@ -1,16 +1,9 @@
 import Sidebar from "@/components/sidebar";
 import Footer from "@/components/footer";
-import {getFilesByExtension} from "@/lib/filesystem";
-import ProcessMarkdownFile, {MarkdownData} from "@/lib/markdown";
+import { getDocs } from "@/lib/docs";
 
 export default async function Home() {
-  const paths = await getFilesByExtension("md");
-  const mdFiles: MarkdownData[] = [];
-  for (const path of paths) {
-    const fileName = path.split("content/").pop()?.replace(".md", "") ?? "";
-    const mdFile = await ProcessMarkdownFile(fileName);
-    mdFiles.push(mdFile);
-  }
+  const mdFiles = await getDocs();
   return (
     <div className="flex w-full justify-center">
       <div className="flex w-full max-w-6xl px-2 justify-between">
