@@ -1,0 +1,24 @@
+@import '@/themes/colors/nord.css';
+
+:root {
+    --hljs-background: var(--nord-snow-light);
+    --hljs-foreground: var(--nord-polar-night-dark);
+    --hljs-highlight-muted: var(--nord-frost-dark-blue);
+    --hljs-highlight: var(--nord-frost-light-blue);
+    --hljs-highlight-bright: var(--nord-frost-cyan);
+    --hljs-highlight-alt: var(--nord-frost-green);
+    --hljs-highlight-number: var(--nord-aurora-purple);
+    --hljs-highlight-regex: var(--nord-aurora-yellow);
+    --hljs-highlight-string: var(--nord-aurora-green);
+    --hljs-highlight-meta: var(--nord-aurora-orange);
+    --hljs-comment: var(--nord-polar-night-lightest);
+    --hljs-addition: rgba(163, 190, 140, 0.5);
+    --hljs-deletion: rgba(191, 97, 106, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --hljs-background: var(--nord-polar-night-dark);
+        --hljs-foreground: var(--nord-snow-mid);
+    }
+}

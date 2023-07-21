@@ -1,0 +1,32 @@
+@import '@/themes/colors/nord.css';
+@import "@/themes/syntax/nord-hljs.css";
+@import "@/themes/syntax/hljs.css";
+
+:root {
+    --foreground-rgb: var(--nord-polar-night-lightest-rgb);
+    --background-start-rgb: var(--nord-snow-mid-rgb);
+    --background-end-rgb: var(--nord-snow-mid-rgb);
+    --link-color: var(--nord-aurora-green);
+    --link-hover-color: var(--nord-frost-cyan);
+    --link-active-color: var(--nord-frost-light-blue);
+    --content-brightest: var(--nord-polar-night-darkest);
+    --content-bright: var(--nord-polar-night-dark);
+    --content: var(--nord-polar-night-light);
+    --quote-background: var(--nord-snow-light);
+    --quote-content: var(--nord-polar-night-light);
+    --border-color: var(--nord-snow-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: var(--nord-snow-dark-rgb);
+        --background-start-rgb: var(--nord-polar-night-darkest-rgb);
+        --background-end-rgb: var(--nord-polar-night-darkest-rgb);
+        --content-brightest: var(--nord-snow-light);
+        --content-bright: var(--nord-snow-mid);
+        --content: var(--nord-snow-dark);
+        --quote-background: var(--nord-polar-night-dark);
+        --quote-content: var(--nord-snow-mid);
+        --border-color: var(--nord-polar-night-lightest);
+    }
+}

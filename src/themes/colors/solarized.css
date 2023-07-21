@@ -1,0 +1,18 @@
+:root {
+    --solarized-yellow: #b58900;
+    --solarized-orange: #cb4b16;
+    --solarized-red: #dc322f;
+    --solarized-magenta: #d33682;
+    --solarized-violet: #6c71c4;
+    --solarized-blue: #268bd2;
+    --solarized-cyan: #2aa198;
+    --solarized-green: #859900;
+    --solarized-light0: #839496;
+    --solarized-light1: #93a1a1;
+    --solarized-light2: #eee8d5;
+    --solarized-light3: #fdf6e3;
+    --solarized-dark0: #657b83;
+    --solarized-dark1: #586e75;
+    --solarized-dark2: #073642;
+    --solarized-dark3: #002b36;
+}

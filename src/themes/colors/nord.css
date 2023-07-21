@@ -1,0 +1,59 @@
+/*
+ * Color Scheme From Nord
+ * Repository: https://github.com/arcticicestudio/nord
+ * License:    MIT
+ * References:
+ *   https://www.w3.org/TR/css-variables
+ *   https://www.w3.org/TR/selectors/#root-pseudo
+ *   https://drafts.csswg.org/css-variables
+ *   https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+ *   http://warpspire.com/kss
+ *   https://github.com/kss-node/kss-node
+*/
+
+:root {
+    /*
+    Polar Night
+    */
+    --nord-polar-night-darkest: #2e3440;
+    --nord-polar-night-darkest-rgb: 46, 52, 64;
+    --nord-polar-night-dark: #3b4252;
+    --nord-polar-night-dark-rgb: 59, 66, 82;
+    --nord-polar-night-light: #434c5e;
+    --nord-polar-night-light-rgb: 67, 76, 94;
+    --nord-polar-night-lightest: #4c566a;
+    --nord-polar-night-lightest-rgb: 76, 86, 106;
+    /*
+    Snow Storm
+    */
+    --nord-snow-dark: #d8dee9;
+    --nord-snow-dark-rgb: 216, 222, 233;
+    --nord-snow-mid: #e5e9f0;
+    --nord-snow-mid-rgb: 229, 233, 240;
+    --nord-snow-light: #eceff4;
+    --nord-snow-light-rgb: 236, 239, 244;
+    /*
+    Frost
+    */
+    --nord-frost-green: #8fbcbb;
+    --nord-frost-green-rgb: 143, 188, 187;
+    --nord-frost-cyan: #88c0d0;
+    --nord-frost-cyan-rgb: 136, 192, 208;
+    --nord-frost-light-blue: #81a1c1;
+    --nord-frost-light-blue-rgb: 129, 161, 193;
+    --nord-frost-dark-blue: #5e81ac;
+    --nord-frost-dark-blue-rgb: 94, 129, 172;
+    /*
+    Aurora
+    */
+    --nord-aurora-red: #bf616a;
+    --nord-aurora-red-rgb: 191, 97, 106;
+    --nord-aurora-orange: #d08770;
+    --nord-aurora-orange-rgb: 208, 135, 112;
+    --nord-aurora-yellow: #ebcb8b;
+    --nord-aurora-yellow-rgb: 235, 203, 139;
+    --nord-aurora-green: #a3be8c;
+    --nord-aurora-green-rgb: 163, 190, 140;
+    --nord-aurora-purple: #b48ead;
+    --nord-aurora-purple-rgb: 180, 142, 173;
+}
