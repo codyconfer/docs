@@ -1,29 +1,31 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
 import Sidebar from "@/components/sidebar";
-import MarkdownArticle from "@/components/markdown/article";
+import Footer from "@/components/footer";
+import {getFilesByExtension} from "@/lib/filesystem";
+import ProcessMarkdownFile, {MarkdownData} from "@/lib/markdown";
 
-export default function Home() {
+export default async function Home() {
+  const paths = await getFilesByExtension("md");
+  const mdFiles: MarkdownData[] = [];
+  for (const path of paths) {
+    const fileName = path.split("content/").pop()?.replace(".md", "") ?? "";
+    const mdFile = await ProcessMarkdownFile(fileName);
+    mdFiles.push(mdFile);
+  }
   return (
-    <>
-      <header className="w-full border-b-2 border-color shadow-md justify-center lg:flex">
-        <Header />
-      </header>
-      <div className="flex w-full justify-center">
-        <div className="flex w-full max-w-6xl px-2 justify-between">
-          <aside className="flex min-w-max max-w-2xl h-screen sticky top-0 pr-8">
-            <Sidebar />
-          </aside>
-          <div className="w-full pl-8 border-l-2 border-color">
-            <main className="flex w-full">
-              <MarkdownArticle fileName={"example"} />
-            </main>
-            <footer>
-              <Footer />
-            </footer>
-          </div>
+    <div className="flex w-full justify-center">
+      <div className="flex w-full max-w-6xl px-2 justify-between">
+        <aside className="flex min-w-max max-w-2xl h-screen sticky top-0">
+          <Sidebar mdFiles={mdFiles} />
+        </aside>
+        <div className="w-full pl-8">
+          <main className="flex w-full">
+
+          </main>
+          <footer>
+            <Footer />
+          </footer>
         </div>
       </div>
-    </>
+    </div>
   )
 }

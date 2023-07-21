@@ -1,7 +1,7 @@
 @import '@/themes/colors/nord.css';
 
 :root {
-    --hljs-background: var(--nord-snow-light);
+    --hljs-background: var(--nord-snow-mid);
     --hljs-foreground: var(--nord-polar-night-dark);
     --hljs-highlight-muted: var(--nord-frost-dark-blue);
     --hljs-highlight: var(--nord-frost-light-blue);
@@ -18,7 +18,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --hljs-background: var(--nord-polar-night-dark);
+        --hljs-background: var(--nord-polar-night-light);
         --hljs-foreground: var(--nord-snow-mid);
     }
 }

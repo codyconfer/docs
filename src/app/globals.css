@@ -18,6 +18,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+header {
+  background-color: var(--header-background)
+}
+
 pre {
   margin: 1rem 0.5rem;
   padding: 1rem;
@@ -107,13 +111,17 @@ blockquote {
 .btn:hover {
   border: 1px solid var(--border-color);
   background-color: var(--border-color);
-  color: var(--background-end-rgb);
+  color: var(--content);
 }
 
 .btn:active {
   border: 1px solid var(--border-color);
   background-color: transparent;
-  color: var(--border-color);
+  color: var(--content);
+}
+
+nav a {
+  color: var(--content);
 }
 
 a {
@@ -126,4 +134,29 @@ a:hover {
 
 a:active {
   color: var(--link-active-color);
+}
+
+.nav-0 {
+  margin-bottom: 1rem;
+}
+
+.nav-1 {
+  margin-bottom: 0.5rem;
+}
+
+.nav-2, .nav-3, .nav-4, .nav-5 {
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.nav-3 {
+  margin-left: 0.5rem;
+}
+
+.nav-4 {
+  margin-left: 1rem;
+}
+
+.nav-5 {
+  margin-left: 1.5rem;
 }

@@ -4,7 +4,6 @@ export default function Footer() {
   return (
     <div className="flex w-full max-w-5xl py-4 px-2 items-center justify-between">
       <section className="flex">
-
       </section>
       <section className="flex">
         By{' '}
