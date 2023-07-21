@@ -1,0 +1,129 @@
+@import '@/themes/use-nord.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-blue: 26, 59, 131;
+  --bg-black: 16, 33, 58;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+pre {
+  margin: 1rem 0.5rem;
+  padding: 1rem;
+}
+
+h1, h2 {
+  margin: 2rem 0 1rem 0;
+  font-weight: bold;
+  color: var(--content-brightest);
+}
+
+h3, h4 {
+  margin: 1.5rem 0 0.5rem 0;
+  font-weight: bold;
+  color: var(--content-bright);
+}
+
+h5, h6 {
+  margin: 1rem 0 0.5rem 0;
+  color: var(--content);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4, h5{
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+ul, ol {
+  margin: 1rem 0 1rem 2rem;
+}
+
+ul li {
+  margin: 0.5rem 0;
+  list-style-type: disc;
+}
+
+ol li {
+  margin: 0.5rem 0;
+  list-style-type: decimal;
+}
+
+blockquote {
+  margin: 2rem 0;
+  padding: 1rem;
+  font-style: italic;
+  background-color: var(--quote-background);
+  color: var(--quote-content);
+  border-left: 0.25rem solid var(--quote-content);
+}
+
+.sidebar {
+  padding-top: 3.5rem;
+}
+
+.headings-nav {
+  padding-top: 3.5rem;
+}
+
+.border-color {
+  border-color: var(--border-color);
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--content);
+  background-color: transparent;
+  color: var(--content);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  border: 1px solid var(--border-color);
+  background-color: var(--border-color);
+  color: var(--background-end-rgb);
+}
+
+.btn:active {
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  color: var(--border-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+a:active {
+  color: var(--link-active-color);
+}

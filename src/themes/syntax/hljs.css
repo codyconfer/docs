@@ -1,0 +1,129 @@
+.hljs,
+pre,
+code {
+    background: var(--hljs-background);
+}
+
+.hljs,
+.hljs-subst,
+.hljs-params,
+.hljs-attribute,
+.hljs-variable,
+.hljs-template-variable {
+    color: var(--hljs-foreground);
+}
+
+.hljs-selector-tag,
+.hljs-keyword,
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-name,
+.hljs-tag,
+.language-apache .hljs-section,
+.language-scss .hljs-keyword,
+.language-stylus .hljs-keyword {
+    color: var(--hljs-highlight);
+}
+
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-built_in,
+.hljs-type,
+.hljs-class,
+.hljs-title,
+.hljs-code,
+.hljs-formula,
+.hljs-doctag,
+.hljs-attr,
+.language-bnf .hljs-attribute,
+.language-cpp .hljs-meta .hljs-string,
+.language-diff .hljs-meta,
+.language-ebnf .hljs-attribute,
+.language-ldif .hljs-attribute {
+    color: var(--hljs-highlight-alt);
+}
+
+.hljs-property,
+.hljs-selector-pseudo,
+.hljs-function,
+.hljs-title.hljs-function,
+.hljs-function > .hljs-title,
+.hljs-section,
+.language-abnf .hljs-attribute,
+.language-apache .hljs-attribute,
+.language-arduino .hljs-built_in,
+.language-aspectj > .hljs-title,
+.language-clojure .hljs-name,
+.language-coq .hljs-built_in,
+.language-css .hljs-built_in,
+.language-glsl .hljs-built_in,
+.language-lisp .hljs-name,
+.language-lua .hljs-built_in,
+.language-moonscript .hljs-built_in,
+.language-nginx .hljs-attribute,
+.language-pf .hljs-built_in,
+.language-processing .hljs-built_in,
+.language-vim .hljs-built_in {
+    color: var(--hljs-highlight-bright);
+}
+
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.language-nginx .hljs-section {
+    color: var(--hljs-highlight-muted);
+}
+
+.hljs-number {
+    color: var(--hljs-highlight-number);
+}
+
+.hljs-regexp,
+.language-abnf .hljs-symbol,
+.language-clojure .hljs-symbol {
+    color: var(--hljs-highlight-regex);
+}
+
+.hljs-string,
+.hljs-meta .hljs-string {
+    color: var(--hljs-highlight-string);
+}
+
+.language-aspectj .hljs-meta,
+.language-css .hljs-keyword,
+.language-groovy .hljs-meta:not(:first-child),
+.language-haxe .hljs-meta,
+.language-java .hljs-meta,
+.language-swift .hljs-meta,
+.language-yaml .hljs-meta {
+    color: var(--hljs-highlight-meta);
+}
+
+.hljs-quote,
+.hljs-comment {
+    color: var(--hljs-comment);
+}
+
+.hljs-addition {
+    background-color: var(--hljs-addition);
+}
+
+.hljs-deletion {
+    background-color: var(--hljs-deletion);
+}
+
+.hljs-selector-id,
+.hljs-strong {
+    font-weight: bold;
+}
+
+.hljs-emphasis,
+.language-vim .hljs-built_in {
+    font-style: italic;
+}
+
+.hljs-link:hover {
+    text-decoration: underline;
+}

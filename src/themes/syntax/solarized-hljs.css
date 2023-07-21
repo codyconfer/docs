@@ -1,0 +1,24 @@
+@import '@/themes/colors/solarized.css';
+
+:root {
+    --hljs-background: var(--solarized-light3);
+    --hljs-foreground: var(--solarized-dark3);
+    --hljs-highlight-muted: var(--solarized-violet);
+    --hljs-highlight: var(--solarized-green);
+    --hljs-highlight-bright: var(--solarized-cyan);
+    --hljs-highlight-alt: var(--solarized-blue);
+    --hljs-highlight-number: var(--solarized-magenta);
+    --hljs-highlight-regex: var(--solarized-yellow);
+    --hljs-highlight-string: var(--solarized-green);
+    --hljs-highlight-meta: var(--solarized-orange);
+    --hljs-comment: var(--solarized-light0);
+    --hljs-addition: rgba(163, 190, 140, 0.5);
+    --hljs-deletion: rgba(191, 97, 106, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --hljs-background: var(--solarized-dark2);
+        --hljs-foreground: var(--solarized-light3);
+    }
+}
