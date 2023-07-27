@@ -5,13 +5,13 @@ import { getDocs } from "@/lib/docs";
 export default async function Home() {
   const mdFiles = await getDocs();
   return (
-    <div className="flex w-full justify-center">
-      <div className="flex w-full max-w-6xl px-2 justify-between">
-        <aside className="flex min-w-max max-w-2xl h-screen sticky top-0">
+    <div className="flex justify-center">
+      <div className="flex max-w-8xl px-8 justify-between">
+        <aside className="flex h-screen sticky top-0">
           <Sidebar mdFiles={mdFiles} />
         </aside>
-        <div className="w-full pl-8">
-          <main className="flex w-full">
+        <div className="pl-8">
+          <main className="flex">
 
           </main>
           <footer>
