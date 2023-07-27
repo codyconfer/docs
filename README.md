@@ -2,6 +2,8 @@
 
 > Docs is a simple, statically generated site that dynamically renders [markdown content](https://www.markdownguide.org/) and [open api specs](https://www.openapis.org/).
 
+![screenshot](https://github.com/codyconfer/docs/blob/bc2814e8cfa9040491b041596076a6f441de261d/.github/screenshot.png)
+
 ## Dependencies
 
 - [nextjs](https://github.com/vercel/next.js)
