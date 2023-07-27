@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <div className="flex w-full max-w-5xl pb-4 pt-16 px-2 items-center justify-between">
+    <div className="flex pb-4 pt-16 px-2 items-center justify-between">
       <section className="flex">
       </section>
       <section className="flex">
@@ -10,7 +10,7 @@ export default function Footer() {
         <Image
           src="/vercel.svg"
           alt="Vercel Logo"
-          className="dark:invert"
+          className="mx-2 dark:invert"
           width={100}
           height={24}
           priority

@@ -21,7 +21,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --foreground-rgb: var(--nord-snow-dark-rgb);
-        --background-start-rgb: var(--nord-polar-night-darkest-rgb);
+        --background-start-rgb: var(--nord-polar-night-dark-rgb);
         --background-end-rgb: var(--nord-polar-night-dark-rgb);
         --header-background: var(--nord-polar-night-darkest);
         --content-brightest: var(--nord-snow-light);

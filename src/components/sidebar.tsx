@@ -54,8 +54,8 @@ export default async function Sidebar({ mdFiles }: SidebarProps) {
   };
 
   return (
-    <nav className="w-full sidebar">
-      <section className="pr-8 border-r-2 border-color">
+    <nav className="sidebar">
+      <section className="min-w-max pr-8 border-r-2 border-color">
         <div className="mb-4">
           <b>{headingNavTitle}</b>
         </div>
