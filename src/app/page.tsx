@@ -10,7 +10,7 @@ export default async function Home() {
   const doc = await getDoc(filename);
   const file = doc?.mdFile;
   return (
-    <div className="flex px-8 justify-between">
+    <div className="flex max-w-screen-2xl px-8 justify-between">
       <aside className="flex h-screen sticky top-0">
         <Sidebar mdFiles={mdFiles} />
       </aside>
