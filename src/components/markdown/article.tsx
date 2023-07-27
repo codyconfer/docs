@@ -3,17 +3,17 @@ import { ReactNode } from "react";
 
 const maxHeadingsDepth: number = 6;
 
-export default async function MarkdownArticle({ content, metaData }: MarkdownData) {
+export default async function MarkdownArticle({ content, metadata }: MarkdownData) {
   const indexNavTitle = "What's on this page";
   const renderChildren = (index: MarkdownIndex[], depth: number = 0): ReactNode => {
-    return index.map((section: MarkdownIndex) =>
+    return index.map((node: MarkdownIndex) =>
       (
-        <div key={section.data.hProperties.id}>
+        <div key={node.data.hProperties.id}>
           <div className={`nav-${depth}`}>
-            <a href={`#${section.data.hProperties.id}`}>{section.value}</a>
+            <a href={`#${node.data.hProperties.id}`}>{node.value}</a>
           </div>
-          {section.children?.length > 0 && section.depth < maxHeadingsDepth
-            ? renderChildren(section.children, depth + 1)
+          {node.children?.length > 0 && node.depth < maxHeadingsDepth
+            ? renderChildren(node.children, depth + 1)
             : ""}
         </div>
       ));
@@ -29,7 +29,7 @@ export default async function MarkdownArticle({ content, metaData }: MarkdownDat
           <div className="mb-4">
             <b>{indexNavTitle}</b>
           </div>
-          {renderChildren(metaData.index)}
+          {renderChildren(metadata.index)}
         </section>
       </nav>
     </>

@@ -19,7 +19,7 @@ export type MarkdownData = {
   fileName: string,
   matter: {[p: string]: any},
   content: string,
-  metaData: MarkdownMeta,
+  metadata: MarkdownMeta,
 };
 
 export interface MarkdownParams {
@@ -43,7 +43,7 @@ export default async function ProcessMarkdownFile(fileName: string) {
       fileName: fileName,
       matter: matterResult.data,
       content: content.toString(),
-      metaData: content.data as MarkdownMeta,
+      metadata: content.data as MarkdownMeta,
   };
   return mdData;
 };
