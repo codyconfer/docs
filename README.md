@@ -2,7 +2,7 @@
 
 > Docs is a simple, statically generated site that dynamically renders [markdown content](https://www.markdownguide.org/) and [open api specs](https://www.openapis.org/).
 
-![screenshot](https://github.com/codyconfer/docs/blob/bc2814e8cfa9040491b041596076a6f441de261d/.github/screenshot.png)
+![screenshot](https://github.com/codyconfer/docs/blob/03ee99872d5892d4a7ede8a2c097404a1fe59548/.github/screenshot.png)
 
 ## Dependencies
 
