@@ -1,12 +1,12 @@
 import '@/app/globals.css';
 import type { Metadata } from 'next';
-import { Heebo, Noto_Serif } from 'next/font/google';
+import { Heebo, Inter } from 'next/font/google';
 import Header from "@/components/header";
-import Sidebar from "@/components/sidebar";
-import Footer from "@/components/footer";
-import {getFilesByExtension} from "@/lib/filesystem";
+import React from "react";
 
-const notoSerif = Noto_Serif({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+})
 const heebo = Heebo({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -21,11 +21,13 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={heebo.className}>
+      <body className={inter.className}>
         <header className="w-full z-10 border-color shadow-md justify-center dark:shadow-gray-800 lg:flex">
           <Header />
         </header>
-        {children}
+        <main className="flex justify-center">
+          {children}
+        </main>
       </body>
     </html>
   )

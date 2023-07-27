@@ -25,7 +25,7 @@ header {
 pre {
   margin: 1rem 0.5rem;
   padding: 1rem;
-  white-space: pre-line;
+  white-space: pre-wrap;
 }
 
 code, span {
@@ -96,8 +96,16 @@ blockquote {
   padding-top: 3.5rem;
 }
 
-.headings-nav {
+.article-nav {
   padding-top: 3.5rem;
+}
+
+.header-nav{
+  font-weight: bold;
+}
+
+.header-nav:hover {
+  cursor: pointer;
 }
 
 .border-color {
@@ -135,10 +143,16 @@ a {
 
 a:hover {
   color: var(--link-hover-color);
+  cursor: pointer;
 }
 
 a:active {
   color: var(--link-active-color);
+  cursor: pointer;
+}
+
+.article-nav {
+  min-width: 14rem;
 }
 
 .nav-0, .nav-1 {
@@ -160,4 +174,8 @@ a:active {
 
 .nav-5 {
   margin-left: 1.5rem;
+}
+
+.text-muted {
+  color: var(--content-muted);
 }

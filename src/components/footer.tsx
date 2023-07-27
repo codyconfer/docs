@@ -8,9 +8,9 @@ export default function Footer() {
       <section className="flex">
         By{' '}
         <Image
-          src="/vercel.svg"
-          alt="Vercel Logo"
-          className="mx-2 dark:invert"
+          src="/logo.svg"
+          alt="Logo"
+          className="mx-2 invert dark:invert-0"
           width={100}
           height={24}
           priority

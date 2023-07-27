@@ -13,6 +13,7 @@
     --content-brightest: var(--nord-polar-night-darkest);
     --content-bright: var(--nord-polar-night-dark);
     --content: var(--nord-polar-night-light);
+    --content-muted: var(--nord-frost-light-blue);
     --quote-background: var(--nord-snow-mid);
     --quote-content: var(--nord-polar-night-light);
     --border-color: var(--nord-snow-dark);
@@ -27,6 +28,7 @@
         --content-brightest: var(--nord-snow-light);
         --content-bright: var(--nord-snow-mid);
         --content: var(--nord-snow-dark);
+        --content-muted: var(--nord-frost-light-blue);
         --quote-background: var(--nord-polar-night-light);
         --quote-content: var(--nord-snow-mid);
         --border-color: var(--nord-polar-night-light);
