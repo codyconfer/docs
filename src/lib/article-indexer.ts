@@ -4,9 +4,9 @@ import { Heading } from "mdast";
 import { toString } from "mdast-util-to-string";
 import { VFile } from "vfile";
 
-export function headingTree() {
+export function indexTree() {
   return (node: Root, file: VFile) => {
-    file.data.headings = getHeadings(node);
+    file.data.index = getIndex(node);
   };
 }
 
@@ -21,11 +21,11 @@ type IndexMap = {
   [key: number]: TransformNodeOutput,
 }
 
-function getHeadings(root: Root) {
+function getIndex(root: Root) {
   const nodes: {id: number, data: {}} = {id: -1, data: {}};
   const output: TransformNodeOutput[] = [];
   const indexMap: IndexMap = {};
-  visit(root, "heading", (node) => {
+  visit(root, "index", (node) => {
     addID(node, nodes);
     transformNode(node, output, indexMap);
   });

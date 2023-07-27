@@ -7,14 +7,14 @@ import rehypeFormat from 'rehype-format'
 import rehypeStringify from 'rehype-stringify'
 import rehypeHighlight from 'rehype-highlight'
 import { unified } from 'unified'
-import { headingTree } from "@/lib/headings";
+import { indexTree } from "@/lib/article-indexer";
 import { getContentPath } from "@/lib/filesystem";
 
 export type MarkdownMeta = {
-  headings: MarkdownHeading[],
+  index: MarkdownIndex[],
 };
 
-export type MarkdownHeading = { data: any, depth: number, children: [], value: any }
+export type MarkdownIndex = { data: any, depth: number, children: [], value: any }
 export type MarkdownData = {
   fileName: string,
   matter: {[p: string]: any},
@@ -32,7 +32,7 @@ export default async function ProcessMarkdownFile(fileName: string) {
   const matterResult = matter(file);
   const content = await unified()
     .use(remarkParse)
-    .use(headingTree)
+    .use(indexTree)
     .use(remarkRehype)
     .use(rehypeDocument)
     .use(rehypeFormat)

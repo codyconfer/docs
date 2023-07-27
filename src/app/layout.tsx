@@ -21,7 +21,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={heebo.className}>
         <header className="w-full z-10 border-color shadow-md justify-center dark:shadow-gray-800 lg:flex">
           <Header />
         </header>
