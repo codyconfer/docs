@@ -21,11 +21,11 @@ export default async function MarkdownArticle({ content, metaData }: MarkdownDat
 
   return (
     <>
-      <article
-        className="grow pr-8"
+      <section
+        className="pr-8"
         dangerouslySetInnerHTML={{ __html: content }} />
-      <nav className="headings-nav h-full top-0 bottom-0">
-        <section className="border-l-2 min-w-max border-color pl-8">
+      <nav className="article-nav h-full top-0 bottom-0">
+        <section className="border-l-2 border-color pl-8">
           <div className="mb-4">
             <b>{headingNavTitle}</b>
           </div>

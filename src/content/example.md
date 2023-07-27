@@ -1,5 +1,5 @@
 ---
-title: Hello
+title: 'Example'
 ---
 
 # Hello

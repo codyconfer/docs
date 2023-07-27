@@ -18,7 +18,7 @@ export default async function Sidebar({ mdFiles }: SidebarProps) {
       return (
         <div key={child.name}>
           <div className={`nav-${child.depth}`}>
-            <span>{child.name}</span>
+            <span className="text-muted">{child.name}</span>
           </div>
         </div>
       )
@@ -26,7 +26,7 @@ export default async function Sidebar({ mdFiles }: SidebarProps) {
       return (
         <div key={child.name}>
           <div className={`nav-${child.depth}`}>
-            <span>{child.name}</span>
+            <span className="text-muted">{child.name}</span>
           </div>
         </div>
       )
@@ -56,7 +56,7 @@ export default async function Sidebar({ mdFiles }: SidebarProps) {
   return (
     <nav className="sidebar">
       <section className="min-w-max pr-8 border-r-2 border-color">
-        <div className="mb-4">
+        <div className="mb-4 text-muted">
           <b>{headingNavTitle}</b>
         </div>
         <div>

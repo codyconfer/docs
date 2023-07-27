@@ -2,12 +2,12 @@ import Image from 'next/image'
 
 export default function Header() {
   return (
-    <div className="flex w-full px-8 py-4 items-center justify-between">
+    <div className="flex w-full max-w-screen-2xl  px-8 py-4 items-center justify-between">
       <section className="flex">
         <Image
-          src="/vercel.svg"
-          alt="Vercel Logo"
-          className="dark:invert"
+          src="/logo.svg"
+          alt="Logo"
+          className="invert dark:invert-0"
           width={128}
           height={24}
           priority
@@ -15,12 +15,12 @@ export default function Header() {
       </section>
       <nav className="flex grow items-end justify-end">
         <div className="flex mx-4">
-          <div className="mx-4">
+          <a className="mx-4 header-nav">
             Docs
-          </div>
-          <div className="mx-4">
+          </a>
+          <a className="mx-4 header-nav">
             APIs
-          </div>
+          </a>
         </div>
       </nav>
       <section className="flex">
