@@ -25,7 +25,7 @@ function getIndex(root: Root) {
   const nodes: {id: number, data: {}} = {id: -1, data: {}};
   const output: TransformNodeOutput[] = [];
   const indexMap: IndexMap = {};
-  visit(root, "index", (node) => {
+  visit(root, "heading", (node) => {
     addID(node, nodes);
     transformNode(node, output, indexMap);
   });

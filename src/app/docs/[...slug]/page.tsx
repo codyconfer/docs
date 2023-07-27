@@ -2,7 +2,6 @@ import MarkdownArticle from "@/components/markdown/article";
 import { getDoc, getDocs } from "@/lib/docs";
 import Sidebar from "@/components/sidebar";
 import Footer from "@/components/footer";
-import Image from "next/image";
 
 export default async function Page(props: any) {
   const filename = props.params.slug.join('/');
@@ -22,7 +21,7 @@ export default async function Page(props: any) {
                 fileName={file.fileName}
                 matter={file.matter}
                 content={file.content}
-                metaData={file.metaData} />
+                metadata={file.metadata} />
               : "Article Not Found"
           }
         </article>
